@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ro"><head><meta charset="utf-8"><style>
+{% include "_common.css" %}
+  body { font-family: "Times New Roman", serif; font-size: 16px; color: #1a1a1a; margin: 0; padding: 55px 75px; width: 1090px; }
+  .top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 34px; }
+  .letterhead { line-height: 1.45; }
+  .letterhead .name { font-size: 22px; font-weight: bold; }
+  .doc { text-align: left; min-width: 380px; }
+  h1 { font-size: 34px; margin: 0 0 10px 0; color: #333; }
+  .buyer { border-left: 4px solid #999; padding-left: 12px; line-height: 1.45; margin-bottom: 30px; }
+  table.items th { border-bottom: 2px solid #333; }
+  table.items td { border-bottom: 1px solid #ccc; }
+  .totals { margin-top: 16px; }
+  .grand td { font-weight: bold; font-size: 18px; }
+</style></head>
+<body>
+  <div class="top">
+    <div class="letterhead">
+      <div><span data-field="seller" data-role="label">{{ L.seller }}</span></div>
+      <div class="name"><span data-field="seller" data-role="value" data-instance="0">{{ v.seller.name }}</span></div>
+      <div>CUI: {{ v.seller.cui }}</div>
+      <div>Reg. Com.: {{ v.seller.reg }}</div>
+      <div>{{ v.seller.address }}</div>
+    </div>
+    <div class="doc">
+      <h1>{{ S.title }}</h1>
+      {{ meta | safe }}
+    </div>
+  </div>
+  <div class="buyer">
+    <div><b><span data-field="buyer" data-role="label">{{ L.buyer }}</span></b></div>
+    <div><span data-field="buyer" data-role="value" data-instance="0">{{ v.buyer.name }}</span></div>
+    <div>CUI: {{ v.buyer.cui }}, Reg. Com.: {{ v.buyer.reg }}</div>
+    <div>{{ v.buyer.address }}</div>
+  </div>
+  {% include "_items.html" %}
+  {{ extras | safe }}
+</body></html>

@@ -1,0 +1,11 @@
+  .meta td { padding: 3px 18px 3px 0; vertical-align: top; }
+  .meta-rows .ml { white-space: nowrap; }
+  .meta-grid td { padding: 2px 34px 2px 0; }
+  .meta-stacked .pair { margin-bottom: 14px; }
+  .meta-stacked .ml { margin-bottom: 1px; }
+  table.items { width: 100%; border-collapse: collapse; }
+  table.items th, table.items td { padding: 6px 8px; text-align: left; }
+  table.items .num { text-align: right; }
+  .totals { border-collapse: collapse; margin-left: auto; }
+  .totals td { padding: 4px 8px; }
+  .totals .num { text-align: right; }

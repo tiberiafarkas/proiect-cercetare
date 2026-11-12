@@ -1,0 +1,11 @@
+<table class="items">
+  <tr><th>{{ S.col_no }}</th><th>{{ S.col_desc }}</th><th>{{ S.col_unit }}</th><th class="num">{{ S.col_qty }}</th><th class="num">{{ S.col_price }}</th><th class="num">{{ S.col_amount }}</th></tr>
+  {% for it in v.items %}
+  <tr><td>{{ loop.index }}</td><td>{{ it.description }}</td><td>{{ it.unit }}</td><td class="num">{{ it.quantity }}</td><td class="num">{{ it.unit_price }}</td><td class="num">{{ it.amount }}</td></tr>
+  {% endfor %}
+</table>
+<table class="totals">
+  <tr><td>{{ S.subtotal }}</td><td class="num">{{ v.subtotal }}</td></tr>
+  <tr><td>{{ S.vat }}</td><td class="num">{{ v.vat }}</td></tr>
+  <tr class="grand"><td><span data-field="total" data-role="label">{{ L.total }} (RON)</span></td><td class="num"><span data-field="total" data-role="value" data-instance="0">{{ v.total }}</span></td></tr>
+</table>

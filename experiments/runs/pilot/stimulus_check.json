@@ -1,0 +1,21 @@
+{
+ "items": 160,
+ "passed": 160,
+ "by_cell": {
+  "C1-conflict": 20,
+  "C1-control": 20,
+  "C2-conflict": 20,
+  "C2-control": 20,
+  "C3-conflict": 20,
+  "C3-control": 20,
+  "C4-conflict": 20,
+  "C4-control": 20
+ },
+ "templates": {
+  "t01_classic": 40,
+  "t02_letterhead": 40,
+  "t03_boxed": 40,
+  "t04_band": 40
+ },
+ "failures": []
+}
