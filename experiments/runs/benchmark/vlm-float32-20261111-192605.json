@@ -1,0 +1,57 @@
+{
+ "timestamp": "2026-11-11T19:26:05",
+ "machine": {
+  "cpu": "Intel64 Family 6 Model 106 Stepping 6, GenuineIntel",
+  "logical_cpus": 32,
+  "ram_gb": 128,
+  "torch_threads": 16
+ },
+ "versions": {
+  "torch": "2.15.0+cpu",
+  "transformers": "5.22.1"
+ },
+ "results": [
+  {
+   "model": "Qwen/Qwen2.5-VL-3B-Instruct",
+   "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+   "dtype": "torch.float32",
+   "max_pixels": 401408,
+   "resized_image": [
+    784,
+    504
+   ],
+   "input_tokens": 599,
+   "load_seconds": 37.6,
+   "generate_seconds": [
+    13.4,
+    13.5
+   ],
+   "peak_rss_gb": 14.7,
+   "raw_output": "{\"answer\": \"13.06.2026\", \"bbox_2d\": [45, 78, 109, 86]}",
+   "gold_answer": "13.06.2026",
+   "answer_correct": true,
+   "iou_with_gold": 0.0
+  },
+  {
+   "model": "Qwen/Qwen2.5-VL-3B-Instruct",
+   "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+   "dtype": "torch.float32",
+   "max_pixels": 1003520,
+   "resized_image": [
+    1232,
+    812
+   ],
+   "input_tokens": 1371,
+   "load_seconds": 10.3,
+   "generate_seconds": [
+    24.3,
+    24.2
+   ],
+   "peak_rss_gb": 15.9,
+   "raw_output": "{\"answer\": \"13.06.2026\", \"bbox_2d\": [70, 154, 264, 173]}",
+   "gold_answer": "13.06.2026",
+   "answer_correct": true,
+   "iou_with_gold": 0.299
+  }
+ ]
+}

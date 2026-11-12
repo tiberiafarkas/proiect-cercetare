@@ -1,0 +1,14 @@
+# Python virtual environments and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated stimulus images are reproducible from code and seeds
+experiments/data/generated/
+
+# Office lock files
+~$*
+
+# uv.lock records the package index URL of the local network; exact versions are in requirements-lock.txt
+experiments/uv.lock

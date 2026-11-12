@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<style>
+  body { font-family: Arial, sans-serif; font-size: 15px; color: #111; margin: 0; padding: 60px 70px; width: 1100px; }
+  h1 { font-size: 30px; letter-spacing: 2px; margin: 0 0 6px 0; }
+  .row { display: flex; justify-content: space-between; margin-bottom: 28px; }
+  .party { width: 46%; line-height: 1.5; }
+  .party .title { font-weight: bold; border-bottom: 1px solid #555; margin-bottom: 6px; }
+  table.meta td { padding: 3px 14px 3px 0; }
+  table.items { width: 100%; border-collapse: collapse; margin-top: 10px; }
+  table.items th, table.items td { border: 1px solid #777; padding: 6px 8px; text-align: left; }
+  table.items th { background: #eee; }
+  .num { text-align: right !important; }
+  .totals { margin-top: 18px; width: 40%; margin-left: auto; }
+  .totals td { padding: 4px 8px; }
+  .grand td { font-weight: bold; border-top: 2px solid #111; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div>
+      <h1>FACTURĂ</h1>
+      <table class="meta">
+        <tr><td>Seria / Nr.</td><td data-field="invoice_number" data-role="value" data-instance="0">ABC 0001842</td></tr>
+        <tr><td data-field="issue_date" data-role="label">Data emiterii:</td><td data-field="issue_date" data-role="value" data-instance="0">14.05.2026</td></tr>
+        <tr><td data-field="due_date" data-role="label">Data scadenței:</td><td data-field="due_date" data-role="value" data-instance="0">13.06.2026</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="party">
+      <div class="title" data-field="seller" data-role="label">FURNIZOR</div>
+      <div data-field="seller" data-role="value" data-instance="0">Exemplu Distribuție SRL</div>
+      <div>CUI: RO00000001 &nbsp; Reg. Com.: J00/0001/2020</div>
+      <div>Str. Exemplului nr. 1, Cluj-Napoca</div>
+    </div>
+    <div class="party">
+      <div class="title" data-field="buyer" data-role="label">CUMPĂRĂTOR</div>
+      <div data-field="buyer" data-role="value" data-instance="0">Model Comerț SA</div>
+      <div>CUI: RO00000002 &nbsp; Reg. Com.: J00/0002/2019</div>
+      <div>Bd. Modelului nr. 2, Iași</div>
+    </div>
+  </div>
+  <table class="items">
+    <tr><th>Nr.</th><th>Denumire produs / serviciu</th><th>U.M.</th><th class="num">Cant.</th><th class="num">Preț unitar</th><th class="num">Valoare</th></tr>
+    <tr><td>1</td><td>Servicii de mentenanță</td><td>ore</td><td class="num">12</td><td class="num">150,00</td><td class="num">1.800,00</td></tr>
+    <tr><td>2</td><td>Piese de schimb</td><td>buc</td><td class="num">3</td><td class="num">240,00</td><td class="num">720,00</td></tr>
+  </table>
+  <table class="totals">
+    <tr><td>Total fără TVA</td><td class="num">2.520,00</td></tr>
+    <tr><td>TVA 19%</td><td class="num">478,80</td></tr>
+    <tr class="grand"><td data-field="total" data-role="label">Total de plată (RON)</td><td class="num" data-field="total" data-role="value" data-instance="0">2.998,80</td></tr>
+  </table>
+</body>
+</html>
