@@ -1,0 +1,71 @@
+{
+ "SROIE (test split, jsdnrs/ICDAR2019-SROIE@bffe40c2)": {
+  "date": {
+   "documents": 361,
+   "value_unparsable": 0,
+   "value_not_found_in_ocr": 2,
+   "value_found": 359,
+   "repeated": 65,
+   "repeated_rate": 0.181058495821727,
+   "occurrence_distribution": {
+    "1": 294,
+    "2": 60,
+    "3": 5
+   }
+  },
+  "total": {
+   "documents": 361,
+   "value_unparsable": 0,
+   "value_not_found_in_ocr": 0,
+   "value_found": 361,
+   "repeated": 268,
+   "repeated_rate": 0.7423822714681441,
+   "occurrence_distribution": {
+    "1": 93,
+    "2": 109,
+    "3": 87,
+    "4": 45,
+    "5+": 27
+   }
+  }
+ },
+ "FATURA (strategy-1 test split, Zenodo 10371464)": {
+  "date": {
+   "documents": 1250,
+   "field_absent": 25,
+   "value_unparsable": 0,
+   "value_not_found_in_text": 10,
+   "value_found": 1215,
+   "repeated": 0,
+   "repeated_rate": 0.0,
+   "occurrence_distribution": {
+    "1": 1215
+   }
+  },
+  "due_date": {
+   "documents": 1250,
+   "field_absent": 525,
+   "value_unparsable": 0,
+   "value_not_found_in_text": 0,
+   "value_found": 725,
+   "repeated": 0,
+   "repeated_rate": 0.0,
+   "occurrence_distribution": {
+    "1": 725
+   }
+  },
+  "total": {
+   "documents": 1250,
+   "field_absent": 200,
+   "value_unparsable": 0,
+   "value_not_found_in_text": 0,
+   "value_found": 1050,
+   "repeated": 51,
+   "repeated_rate": 0.04857142857142857,
+   "occurrence_distribution": {
+    "1": 999,
+    "2": 51
+   }
+  }
+ }
+}
