@@ -7,6 +7,10 @@ def test_normalize_unifies_date_formats():
     assert normalize("13.06.2026") == "13.06.2026"
     assert normalize(" 13/6/2026 ") == "13.06.2026"
     assert normalize("13 - 06 - 2026") == "13.06.2026"
+    assert normalize("13.06.2026.") == "13.06.2026"
+    assert normalize("Data emiterii: 13.06.2026") == "13.06.2026"
+    assert normalize("(RON) 27.888,84 13.06.2026") == "(ron) 27.888,84 13.06.2026"
+    assert normalize("13.06.2026 - 14.07.2026") == "13.06.2026 - 14.07.2026"
     assert normalize("  Exemplu   SRL ") == "exemplu srl"
 
 
@@ -21,6 +25,7 @@ def test_categorize():
     assert categorize('{"answer": "14/05/2026"}', CANDIDATES) == ("B", "14.05.2026")
     assert categorize('{"answer": "01.01.2026"}', CANDIDATES) == ("other", "01.01.2026")
     assert categorize("I think it is 13.06.2026", CANDIDATES) == ("invalid", None)
+    assert categorize('{"answer": "Data scadenței: 13.06.2026"}', CANDIDATES) == ("A", "13.06.2026")
     assert categorize('{"answer": 5}', CANDIDATES) == ("invalid", None)
 
 

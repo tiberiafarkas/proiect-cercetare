@@ -21,11 +21,17 @@ def parse_json(text: str) -> dict | None:
 
 
 def normalize(answer: str) -> str:
-    """Dates become dd.mm.yyyy regardless of separators and spacing; other strings are lowercased and trimmed."""
-    match = _DATE.search(answer)
-    if match:
-        day, month, year = match.groups()
-        return f"{int(day):02d}.{int(month):02d}.{year}"
+    """An answer with exactly one date and no other number becomes dd.mm.yyyy.
+
+    Words around the date (for example an echoed label) are allowed. Any other answer, including a date
+    mixed with an amount, is lowercased and trimmed, so it can never equal a candidate date.
+    """
+    found = list(_DATE.finditer(answer))
+    if len(found) == 1:
+        rest = answer[: found[0].start()] + answer[found[0].end():]
+        if not re.search(r"\d", rest):
+            day, month, year = found[0].groups()
+            return f"{int(day):02d}.{int(month):02d}.{year}"
     return " ".join(answer.lower().split())
 
 

@@ -72,18 +72,22 @@ def _stats(c: pd.DataFrame) -> dict[str, float]:
     }
 
 
-def summarize(df: pd.DataFrame, replicates: int = 2000, seed: int = 0) -> pd.DataFrame:
-    """Point estimates and 95% percentile intervals from resampling base invoices within each cell."""
-    counts = _counts(df)
+def summarize(df: pd.DataFrame, replicates: int = 2000, seed: int = 0, cell: list[str] | None = None) -> pd.DataFrame:
+    """Point estimates and 95% percentile intervals from resampling base invoices within each cell.
+
+    With `cell` omitted, cells are (model condition, conflict, label form); a shorter list pools over the rest.
+    """
+    cell = cell or CELL
+    counts = _counts(df).groupby(cell + ["base_id"]).sum(numeric_only=True).reset_index()
     rng = np.random.default_rng(seed)
     rows = []
-    for cell, c in counts.groupby(CELL):
+    for key, c in counts.groupby(cell):
         point = _stats(c)
         boots = []
         for _ in range(replicates):
             boots.append(_stats(c.iloc[rng.integers(0, len(c), len(c))]))
         boots = pd.DataFrame(boots)
-        row = dict(zip(CELL, cell))
+        row = dict(zip(cell, key))
         row.update({"bases": len(c), "queries": int(c.n.sum()), "decisive": int((c.n_a + c.n_b).sum())})
         for k, v in point.items():
             row[k] = v

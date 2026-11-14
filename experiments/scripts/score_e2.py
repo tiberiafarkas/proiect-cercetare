@@ -22,6 +22,8 @@ def main() -> None:
     df.to_csv(out / "e2_scored.csv", index=False, encoding="utf-8")
     summary = summarize(df, args.replicates)
     summary.to_csv(out / "e2_summary.csv", index=False, float_format="%.3f")
+    pooled = summarize(df, args.replicates, cell=["condition_model", "conflict"])
+    pooled.to_csv(out / "e2_summary_pooled.csv", index=False, float_format="%.3f")
     effects = label_form_effects(df, args.replicates)
     effects.to_csv(out / "e2_label_form_effects.csv", index=False, float_format="%.3f")
     print(f"Scored {len(df)} answers from {[p.name for p in run_paths]}")
