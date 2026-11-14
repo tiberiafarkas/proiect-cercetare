@@ -1,0 +1,7 @@
+overlap_correct,I1,follows_edit,retains,All
+False,follows_edit,0,8,8
+False,retains,2,0,2
+True,follows_edit,0,11,11
+True,other,0,1,1
+True,retains,6,0,6
+All,,8,20,28
