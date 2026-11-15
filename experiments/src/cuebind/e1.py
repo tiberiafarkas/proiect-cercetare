@@ -20,6 +20,11 @@ def amounts(text: str) -> list[float]:
     return [float(m.replace(",", "")) for m in _AMOUNT.findall(text)]
 
 
+def amount_spans(text: str) -> list[tuple[float, int, int]]:
+    """Each amount in the text with its character span."""
+    return [(float(m.group(0).replace(",", "")), m.start(), m.end()) for m in _AMOUNT.finditer(text)]
+
+
 def _year(y: str) -> int:
     return int(y) + 2000 if len(y) == 2 else int(y)
 
