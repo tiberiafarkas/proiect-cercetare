@@ -60,20 +60,31 @@ class TextModel:
 
 
 class VisionModel:
-    """F4: the rendered image and the question; returns an answer and a box in resized-image pixels."""
+    """F4: the rendered image and the question; returns an answer and a box in resized-image pixels.
+
+    Images larger than VLM_MAX_PIXELS are downscaled here, keeping the aspect ratio, because the processor
+    ignores the size argument in the installed Transformers version and would otherwise use its default
+    limit of 12.8 megapixels. Rendered pilot invoices (about 1 megapixel) are not affected.
+    """
 
     def __init__(self) -> None:
         from transformers import AutoModelForImageTextToText, AutoProcessor
 
-        self.processor = AutoProcessor.from_pretrained(
-            VLM_ID, revision=VLM_REV, size={"shortest_edge": VLM_MIN_PIXELS, "longest_edge": VLM_MAX_PIXELS}
-        )
+        self.processor = AutoProcessor.from_pretrained(VLM_ID, revision=VLM_REV)
         self.model = AutoModelForImageTextToText.from_pretrained(VLM_ID, revision=VLM_REV, dtype=torch.float32).eval()
+
+    @staticmethod
+    def limit(image: Image.Image) -> Image.Image:
+        w, h = image.size
+        if w * h <= VLM_MAX_PIXELS:
+            return image
+        scale = (VLM_MAX_PIXELS / (w * h)) ** 0.5
+        return image.resize((max(28, int(w * scale)), max(28, int(h * scale))), Image.BICUBIC)
 
     def generate(self, image_path: str, question: str) -> Generation:
         import time
 
-        image = Image.open(image_path).convert("RGB")
+        image = self.limit(Image.open(image_path).convert("RGB"))
         messages = [{"role": "user", "content": [
             {"type": "image", "image": image},
             {"type": "text", "text": f"{question}\n{ANSWER_AND_BOX}"},
@@ -83,6 +94,8 @@ class VisionModel:
         )
         _, grid_h, grid_w = inputs["image_grid_thw"][0].tolist()
         patch = self.processor.image_processor.patch_size
+        if grid_w * grid_h * patch * patch > VLM_MAX_PIXELS * 1.05:
+            raise RuntimeError(f"image processed at {grid_w * patch}x{grid_h * patch}, above the pixel limit")
         start = time.perf_counter()
         with torch.inference_mode():
             out = self.model.generate(**inputs, max_new_tokens=64, do_sample=False)
