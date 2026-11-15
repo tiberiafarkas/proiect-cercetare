@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ro"><head><meta charset="utf-8"><style>
+{% include "_common.css" %}
+  body { font-family: Georgia, serif; font-size: 15px; color: #222; margin: 0; width: 1240px; display: flex; }
+  .side { width: 330px; background: #f1ede4; padding: 50px 30px; min-height: 900px; box-sizing: border-box; }
+  .side h1 { font-size: 30px; margin: 0 0 24px 0; color: #6b4e16; }
+  .side .block { margin-top: 26px; line-height: 1.45; }
+  .side .head { font-weight: bold; color: #6b4e16; }
+  .main { flex: 1; padding: 50px 50px; }
+  .party { line-height: 1.45; margin-bottom: 26px; }
+  .party .name { font-size: 19px; font-weight: bold; }
+  table.items th { border-bottom: 2px solid #6b4e16; }
+  table.items td { border-bottom: 1px solid #ddd; }
+  .totals { margin-top: 14px; }
+  .grand td { font-weight: bold; color: #6b4e16; }
+</style></head>
+<body>
+  <div class="side">
+    <h1>{{ S.title }}</h1>
+    {{ meta | safe }}
+    <div class="block">
+      <div class="head"><span data-field="buyer" data-role="label">{{ L.buyer }}</span></div>
+      <div><span data-field="buyer" data-role="value" data-instance="0">{{ v.buyer.name }}</span></div>
+      <div>CUI {{ v.buyer.cui }}</div>
+      <div>{{ v.buyer.reg }}</div>
+      <div>{{ v.buyer.address }}</div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="party">
+      <div><span data-field="seller" data-role="label">{{ L.seller }}</span></div>
+      <div class="name"><span data-field="seller" data-role="value" data-instance="0">{{ v.seller.name }}</span></div>
+      <div>CUI {{ v.seller.cui }} &middot; {{ v.seller.reg }}</div>
+      <div>{{ v.seller.address }}</div>
+    </div>
+    {% include "_items.html" %}
+    {{ extras | safe }}
+  </div>
+</body></html>

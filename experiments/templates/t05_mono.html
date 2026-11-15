@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro"><head><meta charset="utf-8"><style>
+{% include "_common.css" %}
+  body { font-family: "Courier New", monospace; font-size: 15px; color: #000; margin: 0; padding: 50px 60px; width: 1120px; }
+  h1 { font-size: 24px; margin: 0 0 18px 0; }
+  .grid { display: flex; gap: 70px; margin-bottom: 26px; }
+  .col { line-height: 1.5; }
+  table.items th, table.items td { border-bottom: 1px dashed #555; }
+  .totals { margin-top: 12px; }
+  .grand td { font-weight: bold; border-top: 1px dashed #000; }
+</style></head>
+<body>
+  <h1>{{ S.title }}</h1>
+  <div class="grid">
+    <div class="col">
+      <div><span data-field="seller" data-role="label">{{ L.seller }}</span>:</div>
+      <div><span data-field="seller" data-role="value" data-instance="0">{{ v.seller.name }}</span></div>
+      <div>CUI {{ v.seller.cui }}</div>
+      <div>{{ v.seller.reg }}</div>
+      <div>{{ v.seller.address }}</div>
+    </div>
+    <div class="col">
+      <div><span data-field="buyer" data-role="label">{{ L.buyer }}</span>:</div>
+      <div><span data-field="buyer" data-role="value" data-instance="0">{{ v.buyer.name }}</span></div>
+      <div>CUI {{ v.buyer.cui }}</div>
+      <div>{{ v.buyer.reg }}</div>
+      <div>{{ v.buyer.address }}</div>
+    </div>
+    <div class="col">{{ meta | safe }}</div>
+  </div>
+  {% include "_items.html" %}
+  {{ extras | safe }}
+</body></html>

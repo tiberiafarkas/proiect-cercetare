@@ -1,0 +1,75 @@
+{
+ "model": "SCUT-DLVCLab/lilt-infoxlm-base",
+ "revision": "9f07474e82c0b3fd1a0a8506fa68a10ef5101dd4",
+ "train_documents": 288,
+ "validation_documents": 48,
+ "args": {
+  "epochs": 10,
+  "batch": 8,
+  "lr": 0.0001,
+  "seed": 0,
+  "smoke": false
+ },
+ "epochs": [
+  {
+   "epoch": 1,
+   "mean_loss": 0.8830010361141629,
+   "val_due_date_accuracy": 0.0,
+   "minutes": 4.2
+  },
+  {
+   "epoch": 2,
+   "mean_loss": 0.6472266465425491,
+   "val_due_date_accuracy": 0.0,
+   "minutes": 8.2
+  },
+  {
+   "epoch": 3,
+   "mean_loss": 0.42324094308747184,
+   "val_due_date_accuracy": 0.0,
+   "minutes": 12.2
+  },
+  {
+   "epoch": 4,
+   "mean_loss": 0.19137046434399155,
+   "val_due_date_accuracy": 0.4166666666666667,
+   "minutes": 16.3
+  },
+  {
+   "epoch": 5,
+   "mean_loss": 0.1066973799218734,
+   "val_due_date_accuracy": 1.0,
+   "minutes": 20.5
+  },
+  {
+   "epoch": 6,
+   "mean_loss": 0.088883385527879,
+   "val_due_date_accuracy": 1.0,
+   "minutes": 24.6
+  },
+  {
+   "epoch": 7,
+   "mean_loss": 0.004915341657275955,
+   "val_due_date_accuracy": 1.0,
+   "minutes": 28.6
+  },
+  {
+   "epoch": 8,
+   "mean_loss": 0.002822493568399093,
+   "val_due_date_accuracy": 1.0,
+   "minutes": 32.0
+  },
+  {
+   "epoch": 9,
+   "mean_loss": 0.0028476754701437634,
+   "val_due_date_accuracy": 1.0,
+   "minutes": 35.4
+  },
+  {
+   "epoch": 10,
+   "mean_loss": 0.002333017580288773,
+   "val_due_date_accuracy": 1.0,
+   "minutes": 38.9
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ro"><head><meta charset="utf-8"><style>
+{% include "_common.css" %}
+  body { font-family: Tahoma, sans-serif; font-size: 13px; color: #111; margin: 0; padding: 40px 60px; width: 1120px; }
+  .head { display: flex; justify-content: space-between; border: 2px solid #111; padding: 14px 18px; margin-bottom: 18px; }
+  .head h1 { font-size: 22px; margin: 0 0 8px 0; }
+  .parties { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid #111; margin-bottom: 18px; }
+  .parties > div { padding: 10px 14px; line-height: 1.45; }
+  .parties > div + div { border-left: 1px solid #111; }
+  .parties .t { font-weight: bold; }
+  table.items th, table.items td { border: 1px solid #111; padding: 4px 6px; }
+  .totals td { border: 1px solid #111; }
+  .grand td { font-weight: bold; }
+</style></head>
+<body>
+  <div class="head">
+    <div>
+      <h1>{{ S.title }}</h1>
+      <div>CUI {{ v.seller.cui }} | {{ v.seller.reg }}</div>
+    </div>
+    {{ meta | safe }}
+  </div>
+  <div class="parties">
+    <div>
+      <div class="t"><span data-field="seller" data-role="label">{{ L.seller }}</span></div>
+      <div><span data-field="seller" data-role="value" data-instance="0">{{ v.seller.name }}</span></div>
+      <div>{{ v.seller.address }}</div>
+    </div>
+    <div>
+      <div class="t"><span data-field="buyer" data-role="label">{{ L.buyer }}</span></div>
+      <div><span data-field="buyer" data-role="value" data-instance="0">{{ v.buyer.name }}</span></div>
+      <div>CUI {{ v.buyer.cui }} | {{ v.buyer.reg }}</div>
+      <div>{{ v.buyer.address }}</div>
+    </div>
+  </div>
+  {% include "_items.html" %}
+  {{ extras | safe }}
+</body></html>
