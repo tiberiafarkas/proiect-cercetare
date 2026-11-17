@@ -35,7 +35,9 @@ All experiments run on CPU.
 | `src/cuebind/models.py`, `text.py` | Model conditions F1, F2 (text, text + boxes) and F4 (vision-language) |
 | `src/cuebind/scoring.py`, `analysis.py`, `e3_analysis.py` | Parsing, categories, cluster-bootstrap summaries |
 | `src/cuebind/e1.py` | Value matching for the E1 repetition audit on public data |
-| `templates/` | Development invoice templates (Jinja2 HTML) |
+| `src/cuebind/sroie.py` | SROIE transfer tests: value localization in OCR lines, masking, scoring |
+| `src/cuebind/lilt.py` | Condition F3: LiLT field tagger, training data from separate templates |
+| `templates/` | Invoice templates (Jinja2 HTML): `t01`-`t04` for the pilot, `t05`-`t07` only for training F3 |
 | `scripts/` | Entry points (see below) |
 | `tests/` | Automated checks (`uv run --project experiments pytest experiments/tests`) |
 | `human_study/` | Four self-contained HTML lists for the human reference study |
@@ -50,9 +52,12 @@ uv run --project experiments python experiments/scripts/check_stimuli.py    # ma
 uv run --project experiments python experiments/scripts/generate_e3.py      # 140 E3 images
 pwsh experiments/scripts/run_pilot_e2.ps1                                   # F1, F2, F4 (about 3 h on CPU)
 pwsh experiments/scripts/run_pilot_e3.ps1                                   # E3 (about 1.5 h on CPU)
+pwsh experiments/scripts/run_lilt.ps1                                       # F3: fine-tune LiLT, answer E2 items
 uv run --project experiments python experiments/scripts/score_e2.py
 uv run --project experiments python experiments/scripts/score_e3.py
 uv run --project experiments python experiments/scripts/e1_audit.py --fatura <path to FATURA2.zip>
+pwsh experiments/scripts/run_sroie.ps1                                      # transfer tests (about 2.5 h on CPU)
+uv run --project experiments python experiments/scripts/score_sroie.py
 uv run --project experiments python experiments/scripts/make_human_study.py
 ```
 
