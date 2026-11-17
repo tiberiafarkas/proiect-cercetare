@@ -41,7 +41,7 @@ def categorize(raw_output: str, candidates: dict[str, str]) -> tuple[str, str | 
     In a control both candidates equal the true due date, so a correct answer is categorized as A.
     """
     parsed = parse_json(raw_output)
-    if parsed is None or not isinstance(parsed.get("answer"), str):
+    if parsed is None or not isinstance(parsed.get("answer"), str) or not parsed["answer"].strip():
         return "invalid", None
     answer = normalize(parsed["answer"])
     if answer == normalize(candidates["A"]):

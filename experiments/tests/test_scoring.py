@@ -27,6 +27,7 @@ def test_categorize():
     assert categorize("I think it is 13.06.2026", CANDIDATES) == ("invalid", None)
     assert categorize('{"answer": "Data scadenței: 13.06.2026"}', CANDIDATES) == ("A", "13.06.2026")
     assert categorize('{"answer": 5}', CANDIDATES) == ("invalid", None)
+    assert categorize('{"answer": ""}', CANDIDATES) == ("invalid", None)
 
 
 def test_iou_and_coverage():
