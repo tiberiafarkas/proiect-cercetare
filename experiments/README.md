@@ -59,6 +59,9 @@ uv run --project experiments python experiments/scripts/e1_audit.py --fatura <pa
 pwsh experiments/scripts/run_sroie.ps1                                      # transfer tests (about 2.5 h on CPU)
 uv run --project experiments python experiments/scripts/score_sroie.py
 uv run --project experiments python experiments/scripts/make_human_study.py
+uv run --project experiments python experiments/scripts/analyze_human.py     # human reference (Section 4.2)
+uv run --project experiments python experiments/scripts/plot_human.py        # Figure 1
+uv run --project experiments python experiments/scripts/e1_meaning.py        # E1 rates by meaning (Section 5.1)
 ```
 
 FATURA is available from Zenodo (record 10371464, CC BY 4.0); SROIE is downloaded
