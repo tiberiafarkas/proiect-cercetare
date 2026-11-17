@@ -6,7 +6,7 @@ participant completes **exactly one** list in a browser and returns the download
 
 | Folder | Content | Used in the analysis |
 |---|---|---|
-| `responses/` | Answer files used in the analysis. `participants.json` maps every file to its participant and gives the order in which the participant completed lists: P1 completed list 1; P2 and P3 each completed lists 1, 2, 3 and 4 in this order, so their lists 2-4 were answered after seeing the same invoices in other versions. The analysis reports all answers and first viewings separately | Yes |
+| `responses/` | Answer files used in the analysis. `participants.json` maps every file to its participant and gives the order in which the participant completed lists: P1 completed list 1; P2, P3 and P4 each completed lists 1, 2, 3 and 4 in this order, so their lists 2-4 were answered after seeing the same invoices in other versions. The analysis reports all answers and first viewings separately | Yes |
 | `test_responses/` | Four files completed by the author on 17 November 2026 to test the procedure (all four lists in a row, 2.6-7.5 minutes each) | No |
 | `repeat_responses/` | A second completion of list 1 by P1, made by mistake right after the first (17 of 20 answers identical); it repeats the same items and is excluded | No |
 

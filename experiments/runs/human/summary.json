@@ -62,141 +62,169 @@
    "list": "4",
    "minutes": 3.2,
    "cannot_tell": 0
+  },
+  {
+   "participant": "P4",
+   "order": 1,
+   "list": "1",
+   "minutes": 3.9,
+   "cannot_tell": 0
+  },
+  {
+   "participant": "P4",
+   "order": 2,
+   "list": "2",
+   "minutes": 26.0,
+   "cannot_tell": 0
+  },
+  {
+   "participant": "P4",
+   "order": 3,
+   "list": "3",
+   "minutes": 3.8,
+   "cannot_tell": 0
+  },
+  {
+   "participant": "P4",
+   "order": 4,
+   "list": "4",
+   "minutes": 3.8,
+   "cannot_tell": 0
   }
  ],
  "all_answers": {
-  "participants": 3,
-  "completions": 9,
-  "answers": 180,
+  "participants": 4,
+  "completions": 13,
+  "answers": 260,
   "distinct_items": 80,
   "by_conflict": {
    "C1": {
-    "control_answers": 22,
-    "control_correct": 22,
-    "conflict_answers": 23,
-    "decisive": 22,
-    "follows_A": 21,
+    "control_answers": 32,
+    "control_correct": 32,
+    "conflict_answers": 33,
+    "decisive": 32,
+    "follows_A": 29,
     "cannot_tell": 1
    },
    "C2": {
-    "control_answers": 23,
-    "control_correct": 23,
-    "conflict_answers": 22,
-    "decisive": 22,
-    "follows_A": 21,
+    "control_answers": 33,
+    "control_correct": 33,
+    "conflict_answers": 32,
+    "decisive": 32,
+    "follows_A": 30,
     "cannot_tell": 0
    },
    "C3": {
-    "control_answers": 22,
-    "control_correct": 20,
-    "conflict_answers": 23,
-    "decisive": 23,
-    "follows_A": 23,
+    "control_answers": 32,
+    "control_correct": 30,
+    "conflict_answers": 33,
+    "decisive": 33,
+    "follows_A": 33,
     "cannot_tell": 0
    },
    "C4": {
-    "control_answers": 23,
-    "control_correct": 23,
-    "conflict_answers": 22,
-    "decisive": 13,
-    "follows_A": 3,
+    "control_answers": 33,
+    "control_correct": 32,
+    "conflict_answers": 32,
+    "decisive": 23,
+    "follows_A": 13,
     "cannot_tell": 9
    }
   },
   "realism": {
    "conflict": {
-    "mean": 2.84,
-    "n": 90
+    "mean": 3.17,
+    "n": 130
    },
    "control": {
-    "mean": 3.7,
-    "n": 90
+    "mean": 3.77,
+    "n": 130
    }
   },
   "agreement_with_models_on_conflicts": {
    "F1": {
-    "matches": 47,
-    "of": 80
+    "matches": 76,
+    "of": 120
    },
    "F2": {
-    "matches": 45,
-    "of": 80
+    "matches": 73,
+    "of": 120
    },
    "F3": {
-    "matches": 32,
-    "of": 80
+    "matches": 54,
+    "of": 120
    },
    "F4": {
-    "matches": 64,
-    "of": 80
+    "matches": 99,
+    "of": 120
    }
   }
  },
  "first_viewings_only": {
-  "participants": 3,
-  "completions": 3,
-  "answers": 60,
+  "participants": 4,
+  "completions": 4,
+  "answers": 80,
   "distinct_items": 20,
   "by_conflict": {
    "C1": {
-    "control_answers": 6,
-    "control_correct": 6,
-    "conflict_answers": 9,
-    "decisive": 9,
-    "follows_A": 8,
+    "control_answers": 8,
+    "control_correct": 8,
+    "conflict_answers": 12,
+    "decisive": 12,
+    "follows_A": 11,
     "cannot_tell": 0
    },
    "C2": {
-    "control_answers": 9,
-    "control_correct": 9,
-    "conflict_answers": 6,
-    "decisive": 6,
-    "follows_A": 5,
+    "control_answers": 12,
+    "control_correct": 12,
+    "conflict_answers": 8,
+    "decisive": 8,
+    "follows_A": 7,
     "cannot_tell": 0
    },
    "C3": {
-    "control_answers": 6,
-    "control_correct": 4,
-    "conflict_answers": 9,
-    "decisive": 9,
-    "follows_A": 9,
+    "control_answers": 8,
+    "control_correct": 6,
+    "conflict_answers": 12,
+    "decisive": 12,
+    "follows_A": 12,
     "cannot_tell": 0
    },
    "C4": {
-    "control_answers": 9,
-    "control_correct": 9,
-    "conflict_answers": 6,
-    "decisive": 5,
-    "follows_A": 3,
+    "control_answers": 12,
+    "control_correct": 12,
+    "conflict_answers": 8,
+    "decisive": 7,
+    "follows_A": 5,
     "cannot_tell": 1
    }
   },
   "realism": {
    "conflict": {
-    "mean": 3.03,
-    "n": 30
+    "mean": 3.2,
+    "n": 40
    },
    "control": {
-    "mean": 3.67,
-    "n": 30
+    "mean": 3.65,
+    "n": 40
    }
   },
   "agreement_with_models_on_conflicts": {
    "F1": {
-    "matches": 18,
-    "of": 29
+    "matches": 25,
+    "of": 39
    },
    "F2": {
-    "matches": 18,
-    "of": 29
+    "matches": 25,
+    "of": 39
    },
    "F3": {
-    "matches": 12,
-    "of": 29
+    "matches": 17,
+    "of": 39
    },
    "F4": {
-    "matches": 25,
-    "of": 29
+    "matches": 35,
+    "of": 39
    }
   }
  }
