@@ -1,4 +1,4 @@
-"""Model conditions F1, F2 and F4 (report, Section 3.3). Revisions are pinned for reproducibility."""
+"""Model conditions F1, F2 and F4 (report, Section 3.2). Revisions are pinned for reproducibility."""
 
 from __future__ import annotations
 

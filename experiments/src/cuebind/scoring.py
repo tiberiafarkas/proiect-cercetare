@@ -1,4 +1,4 @@
-"""Answer parsing, normalization and categorization (report, Section 3.4)."""
+"""Answer parsing, normalization and categorization (report, Section 3.3)."""
 
 from __future__ import annotations
 

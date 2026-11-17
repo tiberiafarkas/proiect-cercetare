@@ -1,4 +1,4 @@
-"""Transfer tests on real receipts from SROIE (report, Section 5.3).
+"""Transfer tests on real receipts from SROIE (report, Section 5.2).
 
 SROIE provides OCR line segments with pixel boxes. A value inside a segment is located by the share of
 characters before and after it, which approximates the value's horizontal extent within the line.

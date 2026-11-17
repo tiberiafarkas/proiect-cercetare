@@ -1,4 +1,4 @@
-"""E3 stimuli: invoices whose issue date occurs twice, with substitution and masking variants (report, Section 3.4).
+"""E3 stimuli: invoices whose issue date occurs twice, with substitution and masking variants (report, Section 3.3).
 
 All variants of one invoice are rendered in advance. Which variant is I1 (the cited instance) or I2 (the
 non-cited instance) is decided after the original run, from the instance the model's box covers.

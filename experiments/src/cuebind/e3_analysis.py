@@ -1,4 +1,4 @@
-"""E3 analysis: cited instance, overlap correctness and responses to edits (report, Section 3.4)."""
+"""E3 analysis: cited instance, overlap correctness and responses to edits (report, Section 3.3)."""
 
 from __future__ import annotations
 

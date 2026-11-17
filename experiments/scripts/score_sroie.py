@@ -1,4 +1,4 @@
-"""Score the SROIE transfer tests (report, Section 5.3) from the stored raw outputs."""
+"""Score the SROIE transfer tests (report, Section 5.2) from the stored raw outputs."""
 
 from __future__ import annotations
 

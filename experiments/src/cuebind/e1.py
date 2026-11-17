@@ -1,4 +1,4 @@
-"""E1: how often the answer value of a field occurs more than once on the same page (report, Section 3.4).
+"""E1: how often the answer value of a field occurs more than once on the same page (report, Section 5.1).
 
 String-level counts are automatic. Whether a repeated string is a copy of the same fact or a collision
 with another field needs a manual check; the audit exports a sample with context for that purpose.

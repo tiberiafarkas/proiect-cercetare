@@ -1,4 +1,4 @@
-"""Condition F3: LiLT with the InfoXLM text encoder, fine-tuned as a field tagger (report, Section 3.3).
+"""Condition F3: LiLT with the InfoXLM text encoder, fine-tuned as a field tagger (report, Section 3.2).
 
 LiLT sees the oracle words and their boxes, not the image. It is trained only on control invoices rendered
 from separate training templates, and it answers the due-date "question" by tagging the due-date span.

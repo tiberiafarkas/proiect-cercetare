@@ -1,4 +1,4 @@
-"""Label forms of the invoice fields (report, Table 2)."""
+"""Label forms of the invoice fields (report, Section 3.1)."""
 
 from __future__ import annotations
 

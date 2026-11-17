@@ -1,4 +1,4 @@
-"""E1 meaning-level rates from the checked classification of the repeated cases (report, Section 5.2).
+"""E1 meaning-level rates from the checked classification of the repeated cases (report, Section 5.1).
 
 For each dataset and field, the share of sampled repeated cases with a strict or loose copy is scaled
 by the string-level repetition rate, which estimates the share of all documents with such a copy.

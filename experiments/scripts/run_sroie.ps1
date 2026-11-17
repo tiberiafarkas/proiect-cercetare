@@ -1,4 +1,4 @@
-# Runs the SROIE transfer tests (report, Section 5.3): competence for F1, F2 and F4, then removal for F4.
+# Runs the SROIE transfer tests (report, Section 5.2): competence for F1, F2 and F4, then removal for F4.
 # About 2.5 hours on a 32-core CPU. Resumable: rerunning skips queries whose raw outputs are already stored.
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot

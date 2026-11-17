@@ -1,4 +1,4 @@
-"""Transfer tests on SROIE receipts (report, Section 5.3); resumable, raw outputs only.
+"""Transfer tests on SROIE receipts (report, Section 5.2); resumable, raw outputs only.
 
 --part competence: conditions F1, F2 and F4 answer the date and the total of a random sample of receipts.
 --part removal:    F4 answers the total of receipts on which the total occurs at least twice, then the same

@@ -25,7 +25,7 @@ Each case gets two labels.
 | `collision` | A different field that happens to have the same value | subtotal when tax is 0; amount or unit price of a single item; item sum on the quantity line; GST summary; printing date |
 | `error` | OCR or annotation error | an amount read twice; an inconsistent synthetic document |
 
-`strict` and `loose` follow the strict and loose copies of Yuan et al. (report, Section 2.2).
+`strict` and `loose` follow the strict and loose copies of Yuan et al. (report, Section 2.1).
 
 ## Drafting and checking
 

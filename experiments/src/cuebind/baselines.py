@@ -1,4 +1,4 @@
-"""Rule-based baselines that each follow exactly one cue (report, Section 3.3).
+"""Rule-based baselines that each follow exactly one cue (report, Section 3.2).
 
 They see the oracle words and the label strings of the current label form, and return the
 date string they would answer for the due-date question, or None.

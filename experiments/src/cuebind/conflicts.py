@@ -1,4 +1,4 @@
-"""Cue conflicts C1-C4 and their matched controls (report, Section 3.2).
+"""Cue conflicts C1-C4 and their matched controls (report, Section 3.1, Table 2).
 
 Every function builds the HTML of the invoice's metadata block (invoice number, issue date, due date).
 Only this block differs between a conflict item and its control.

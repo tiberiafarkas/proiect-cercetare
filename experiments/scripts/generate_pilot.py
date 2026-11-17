@@ -1,4 +1,4 @@
-"""Generate the pilot stimuli (report, Section 3.6) into data/generated/pilot."""
+"""Generate the pilot stimuli (report, Section 3.5) into data/generated/pilot."""
 
 import argparse
 from pathlib import Path
