@@ -1,0 +1,175 @@
+{
+ "completions": [
+  {
+   "participant": "P1",
+   "order": 1,
+   "list": "1",
+   "minutes": 9.0,
+   "cannot_tell": 0
+  },
+  {
+   "participant": "P2",
+   "order": 1,
+   "list": "1",
+   "minutes": 10.9,
+   "cannot_tell": 1
+  },
+  {
+   "participant": "P2",
+   "order": 2,
+   "list": "2",
+   "minutes": 3.6,
+   "cannot_tell": 2
+  },
+  {
+   "participant": "P2",
+   "order": 3,
+   "list": "3",
+   "minutes": 3.5,
+   "cannot_tell": 4
+  },
+  {
+   "participant": "P2",
+   "order": 4,
+   "list": "4",
+   "minutes": 4.6,
+   "cannot_tell": 3
+  }
+ ],
+ "all_answers": {
+  "participants": 2,
+  "completions": 5,
+  "answers": 100,
+  "distinct_items": 80,
+  "by_conflict": {
+   "C1": {
+    "control_answers": 12,
+    "control_correct": 12,
+    "conflict_answers": 13,
+    "decisive": 12,
+    "follows_A": 11,
+    "cannot_tell": 1
+   },
+   "C2": {
+    "control_answers": 13,
+    "control_correct": 13,
+    "conflict_answers": 12,
+    "decisive": 12,
+    "follows_A": 11,
+    "cannot_tell": 0
+   },
+   "C3": {
+    "control_answers": 12,
+    "control_correct": 11,
+    "conflict_answers": 13,
+    "decisive": 13,
+    "follows_A": 13,
+    "cannot_tell": 0
+   },
+   "C4": {
+    "control_answers": 13,
+    "control_correct": 13,
+    "conflict_answers": 12,
+    "decisive": 3,
+    "follows_A": 3,
+    "cannot_tell": 9
+   }
+  },
+  "realism": {
+   "conflict": {
+    "mean": 2.96,
+    "n": 50
+   },
+   "control": {
+    "mean": 3.82,
+    "n": 50
+   }
+  },
+  "agreement_with_models_on_conflicts": {
+   "F1": {
+    "matches": 27,
+    "of": 40
+   },
+   "F2": {
+    "matches": 26,
+    "of": 40
+   },
+   "F3": {
+    "matches": 18,
+    "of": 40
+   },
+   "F4": {
+    "matches": 36,
+    "of": 40
+   }
+  }
+ },
+ "first_viewings_only": {
+  "participants": 2,
+  "completions": 2,
+  "answers": 40,
+  "distinct_items": 20,
+  "by_conflict": {
+   "C1": {
+    "control_answers": 4,
+    "control_correct": 4,
+    "conflict_answers": 6,
+    "decisive": 6,
+    "follows_A": 5,
+    "cannot_tell": 0
+   },
+   "C2": {
+    "control_answers": 6,
+    "control_correct": 6,
+    "conflict_answers": 4,
+    "decisive": 4,
+    "follows_A": 3,
+    "cannot_tell": 0
+   },
+   "C3": {
+    "control_answers": 4,
+    "control_correct": 3,
+    "conflict_answers": 6,
+    "decisive": 6,
+    "follows_A": 6,
+    "cannot_tell": 0
+   },
+   "C4": {
+    "control_answers": 6,
+    "control_correct": 6,
+    "conflict_answers": 4,
+    "decisive": 3,
+    "follows_A": 3,
+    "cannot_tell": 1
+   }
+  },
+  "realism": {
+   "conflict": {
+    "mean": 3.15,
+    "n": 20
+   },
+   "control": {
+    "mean": 3.6,
+    "n": 20
+   }
+  },
+  "agreement_with_models_on_conflicts": {
+   "F1": {
+    "matches": 13,
+    "of": 19
+   },
+   "F2": {
+    "matches": 13,
+    "of": 19
+   },
+   "F3": {
+    "matches": 8,
+    "of": 19
+   },
+   "F4": {
+    "matches": 17,
+    "of": 19
+   }
+  }
+ }
+}
