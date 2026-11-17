@@ -1,0 +1,23 @@
+{
+ "receipts": 30,
+ "original_correct": 30,
+ "cited_an_instance": 13,
+ "mask_cited": {
+  "n": 13,
+  "answer_kept": 0.7692307692307693,
+  "lo": 0.5384615384615384,
+  "hi": 1.0
+ },
+ "mask_all": {
+  "n": 30,
+  "answer_kept": 0.16666666666666666,
+  "lo": 0.03333333333333333,
+  "hi": 0.3
+ },
+ "mask_random": {
+  "n": 30,
+  "answer_kept": 1.0,
+  "lo": 1.0,
+  "hi": 1.0
+ }
+}
