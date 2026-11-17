@@ -60,7 +60,8 @@ pwsh experiments/scripts/run_sroie.ps1                                      # tr
 uv run --project experiments python experiments/scripts/score_sroie.py
 uv run --project experiments python experiments/scripts/make_human_study.py
 uv run --project experiments python experiments/scripts/analyze_human.py     # human reference (Section 4.2)
-uv run --project experiments python experiments/scripts/plot_human.py        # Figure 1
+uv run --project experiments python experiments/scripts/plot_human.py        # Figure 2
+uv run --project experiments python experiments/scripts/plot_examples.py     # Figures 1, 3 and 4 (overview, E3 and SROIE examples)
 uv run --project experiments python experiments/scripts/e1_meaning.py        # E1 rates by meaning (Section 5.1)
 ```
 

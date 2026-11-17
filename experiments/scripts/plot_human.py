@@ -1,4 +1,4 @@
-"""Figure of the human reference study next to the model conditions (report, Figure 1, Section 4.2).
+"""Figure of the human reference study next to the model conditions (report, Figure 2, Section 4.2).
 
 One column per conflict. Top: the metadata block of a real conflict invoice from the study, with the two
 competing dates marked A and B, and a definition of each cue. Bottom: for each group of readers, the share
