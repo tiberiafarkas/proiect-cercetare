@@ -1,0 +1,59 @@
+{
+ "FATURA": {
+  "sampled": 40,
+  "checked": 40,
+  "drafts_changed": 0,
+  "by_field": {
+   "total": {
+    "cases": 40,
+    "copy": {
+     "no": 40
+    },
+    "other_kinds": {
+     "derived": 39,
+     "error": 1
+    },
+    "share_with_copy": 0.0,
+    "share_with_strict_copy": 0.0,
+    "estimated_documents_with_copy": 0.0,
+    "estimated_documents_with_strict_copy": 0.0
+   }
+  }
+ },
+ "SROIE": {
+  "sampled": 40,
+  "checked": 40,
+  "drafts_changed": 1,
+  "by_field": {
+   "date": {
+    "cases": 4,
+    "copy": {
+     "no": 4
+    },
+    "other_kinds": {
+     "collision": 4
+    },
+    "share_with_copy": 0.0,
+    "share_with_strict_copy": 0.0,
+    "estimated_documents_with_copy": 0.0,
+    "estimated_documents_with_strict_copy": 0.0
+   },
+   "total": {
+    "cases": 36,
+    "copy": {
+     "no": 27,
+     "loose": 9
+    },
+    "other_kinds": {
+     "collision": 20,
+     "derived": 18,
+     "error": 1
+    },
+    "share_with_copy": 0.25,
+    "share_with_strict_copy": 0.0,
+    "estimated_documents_with_copy": 0.186,
+    "estimated_documents_with_strict_copy": 0.0
+   }
+  }
+ }
+}

@@ -2,19 +2,41 @@
 
 `summary.json` gives string-level repetition rates: the share of documents whose annotated
 answer value occurs more than once in the page text. `*_repeats_sample.csv` holds a random
-sample of repeated cases with context (`previous segment | segment` for each occurrence).
+sample of 40 repeated cases per dataset with context (`previous segment | segment` for each
+occurrence), classified by meaning.
 
-## Manual check of the sample
+## Classification
 
-Fill the `manual_label` column with one label per row, judged from the contexts:
+Each case gets two labels.
 
-| Label | Meaning | Examples |
+**`copy`**: does the page state the same fact at least twice?
+
+| Value | Meaning | Example |
 |---|---|---|
-| `copy` | The same field is stated again | TOTAL and ROUNDED TOTAL; TOTAL INCL. GST and TOTAL; the date in the header and again in the footer |
-| `derived` | A different field that equals the answer by construction | amount paid by card or cash equal to the total |
-| `collision` | A different field that happens to have the same value | subtotal equal to total when tax is 0; a line amount or unit price equal to the total; a printing date equal to the invoice date |
-| `error` | OCR or annotation error | the value is misread or the annotation is wrong |
+| `strict` | The same field is stated again with the same value | TOTAL in the header and TOTAL in the footer |
+| `loose` | The same quantity at a different precision or stage, equal on this page | total before rounding and total after rounding, when the rounding adjustment is 0 |
+| `no` | No second statement of the same fact | |
 
-If a row contains several kinds, label the most informative non-`copy` kind and add a short
-note after a semicolon (for example `collision; unit price`). Only `copy` rows count towards the
-meaning-level rate that is comparable with Yuan et al. (report, Section 2.7).
+**`other_kinds`**: further occurrences that are not copies (several values separated by `;`).
+
+| Value | Meaning | Examples |
+|---|---|---|
+| `derived` | A different field that equals the answer by construction | amount paid by card or cash; balance or amount due |
+| `collision` | A different field that happens to have the same value | subtotal when tax is 0; amount or unit price of a single item; item sum on the quantity line; GST summary; printing date |
+| `error` | OCR or annotation error | an amount read twice; an inconsistent synthetic document |
+
+`strict` and `loose` follow the strict and loose copies of Yuan et al. (report, Section 2.2).
+
+## Drafting and checking
+
+The labels were drafted by the AI assistant on 17 November 2026 from the contexts, with the
+receipt images inspected for the 15 SROIE cases whose OCR reading order separated labels from
+amounts. The draft is kept in `draft_copy`, `draft_other_kinds` and `draft_note`. The author
+checks every row: edit `copy` and `other_kinds` where you disagree, and write `yes` in
+`checked_by_author`. Then run
+
+```powershell
+uv run --project experiments python experiments/scripts/e1_meaning.py
+```
+
+which computes the meaning-level rates from the checked rows and counts the changed drafts.
