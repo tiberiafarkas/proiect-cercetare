@@ -1,0 +1,126 @@
+{
+ "list": "1",
+ "native_language": "ro",
+ "answers": [
+  {
+   "item_id": "C1-b04-RO-conflict",
+   "answer": "02.09.2026",
+   "realism": 4,
+   "ms": 27902
+  },
+  {
+   "item_id": "C4-b00-EN-control",
+   "answer": "23.06.2026",
+   "realism": 4,
+   "ms": 31158
+  },
+  {
+   "item_id": "C2-b00-ND-control",
+   "answer": "09.04.2026",
+   "realism": 4,
+   "ms": 20586
+  },
+  {
+   "item_id": "C1-b00-RO-conflict",
+   "answer": "28.11.2026",
+   "realism": 4,
+   "ms": 18076
+  },
+  {
+   "item_id": "C3-b01-EN-control",
+   "answer": "20.07.2026",
+   "realism": 4,
+   "ms": 15416
+  },
+  {
+   "item_id": "C3-b03-ND-control",
+   "answer": "25.05.2026",
+   "realism": 4,
+   "ms": 24901
+  },
+  {
+   "item_id": "C1-b03-EN-control",
+   "answer": "30.05.2026",
+   "realism": 4,
+   "ms": 13063
+  },
+  {
+   "item_id": "C1-b01-ND-control",
+   "answer": "24.10.2026",
+   "realism": 4,
+   "ms": 14150
+  },
+  {
+   "item_id": "C4-b01-RO-conflict",
+   "answer": "26.10.2026",
+   "realism": 1,
+   "ms": 52649
+  },
+  {
+   "item_id": "C2-b04-ND-control",
+   "answer": "17.06.2026",
+   "realism": 3,
+   "ms": 34588
+  },
+  {
+   "item_id": "C3-b00-AB-conflict",
+   "answer": "04.08.2026",
+   "realism": 4,
+   "ms": 14407
+  },
+  {
+   "item_id": "C2-b02-EN-control",
+   "answer": "25.05.2026",
+   "realism": 4,
+   "ms": 11535
+  },
+  {
+   "item_id": "C2-b03-RO-conflict",
+   "answer": "06.11.2026",
+   "realism": 1,
+   "ms": 17985
+  },
+  {
+   "item_id": "C3-b02-RO-conflict",
+   "answer": "06.11.2026",
+   "realism": 4,
+   "ms": 9624
+  },
+  {
+   "item_id": "C1-b02-AB-conflict",
+   "answer": "21.06.2026",
+   "realism": 3,
+   "ms": 16101
+  },
+  {
+   "item_id": "C2-b01-AB-conflict",
+   "answer": "06.11.2026",
+   "realism": 3,
+   "ms": 14651
+  },
+  {
+   "item_id": "C4-b03-AB-conflict",
+   "answer": "23.05.2026",
+   "realism": 1,
+   "ms": 11418
+  },
+  {
+   "item_id": "C4-b04-EN-control",
+   "answer": "25.02.2026",
+   "realism": 3,
+   "ms": 15178
+  },
+  {
+   "item_id": "C4-b02-ND-control",
+   "answer": "02.03.2026",
+   "realism": 4,
+   "ms": 15639
+  },
+  {
+   "item_id": "C3-b04-AB-conflict",
+   "answer": "13.07.2026",
+   "realism": 3,
+   "ms": 11817
+  }
+ ]
+}
