@@ -152,7 +152,7 @@ def e3_example(out: Path) -> None:
                 colour, source = COLOR_NEUTRAL, "other"
             tx.text(0.02, 0.92 - k * 0.42, f"{paraphrase}  {answer}", fontsize=6.8, color=colour, fontweight="bold",
                     va="top", transform=tx.transAxes)
-            tx.text(0.02, 0.92 - k * 0.42 - 0.2, f"     from {source}", fontsize=6, color=colour, va="top",
+            tx.text(0.02, 0.92 - k * 0.42 - 0.2, f"     matches {source}", fontsize=6, color=colour, va="top",
                     transform=tx.transAxes)
     fig.savefig(out, dpi=300, bbox_inches="tight")
     plt.close(fig)
